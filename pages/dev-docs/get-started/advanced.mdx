@@ -5,7 +5,7 @@ import { Callout } from 'nextra-theme-docs'
 <Callout emoji="" type="info">Want to quickly experiment with Fides? Clone the [source repository](https://github.com/ethyca/fides) to utilize the built-in Docker Compose file, alternatively check out the quick start guide [start-up guide](/dev-docs/get-started) to run a privacy request in minutes, or use follow the [basic installation](/dev-docs/get-started/installation).</Callout>
 
 ## Minimum requirements
-See the the [project requirements](/dev-docs/get-started/requirements) page to get started.
+See the [project requirements](/dev-docs/get-started/requirements) page to get started.
 
 ## Installation options
 The Fides team maintains a Python package [published on PyPI](https://pypi.org/project/fides/), and a Docker image on the [ethyca/fides DockerHub](https://hub.docker.com/r/ethyca/fides/tags).
@@ -56,7 +56,7 @@ Options include:
 * Managed PostgreSQL database services (e.g. AWS RDS, GCP Cloud SQL, Azure Database)
 * Self-hosted PostgreSQL Docker container with a persistent volume mount (e.g. on a Kubernetes cluster)
 * Self-hosted PostgreSQL server (e.g. on an EC2 server)
-<Callout emoti="!"> There is no reason to expose this database to the public internet as long as it will be accessible by your webserver.</Callout>
+<Callout emoji="!"> There is no reason to expose this database to the public internet as long as it will be accessible by your webserver.</Callout>
 
 Once the database is up and running:
 1. create a database user for the webserver (e.g. `fides`)
@@ -69,12 +69,12 @@ Ensure you make note of your connection credentials, as those values will be use
 ## Set up your cache
 To ensure personal data is never retained erroneously, Fides collects privacy request result data in a temporary Redis cache that automatically expires.
 
-Any hosted Redis database that meets the [project requirements](/dev-docs/get-started/requirements) work for this purpose. Follow the deployment documentation of your choice to get set up your Redis cache.
+Any hosted Redis database that meets the [project requirements](/dev-docs/get-started/requirements) work for this purpose. Follow the deployment documentation of your choice to get up your Redis cache.
 
 Options include: 
 * A simple Docker redis container (https://hub.docker.com/_/redis)
 * A managed service (e.g. AWS ElastiCache, GCP Memorystore, Azure Cache, Redis Cloud)
-<Callout emoti="!"> There is no reason to expose this cache to the public internet as long as it will be accessible by your webserver.</Callout>
+<Callout emoji="!"> There is no reason to expose this cache to the public internet as long as it will be accessible by your webserver.</Callout>
 
 Once your cache is available:
 1. enable a password (via Redis [AUTH](https://redis.io/commands/auth/)) to provide additional security
